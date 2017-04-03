@@ -9,6 +9,7 @@ public:
 
   Maze(int _w, int _rows, int _columns);
 
+  void setupWalls();
   void draw();
 
   int unitsX, unitsY;

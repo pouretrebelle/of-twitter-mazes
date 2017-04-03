@@ -5,7 +5,10 @@ class MazeWall {
 
 public:
 
-  MazeWall();
+  MazeWall(int _x, int _y, bool _vertical, bool _disabled);
+
+  int x, y;
+  bool vertical, active, disabled;
 
 private:
 
