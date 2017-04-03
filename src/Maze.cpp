@@ -15,7 +15,8 @@ void Maze::setup(int _w, int _rows, int _columns) {
   // make a load of walls
   setupWalls();
 
-  // make a load of tiles that reference those walls
+  // make a load of units that reference those walls
+  setupUnits();
 
   // use algorithm to carve walls
 }
@@ -50,6 +51,34 @@ void Maze::setupWalls() {
       // add to vector and save position
       mazeWalls.push_back(newWall);
       mazeWallPositions[x][y] = y * (unitsX * 2 + 1) + x;
+    }
+  }
+}
+
+void Maze::setupUnits() {
+
+  // initialise mazeUnitPositions 2D array
+  mazeUnitPositions = new int*[unitsX];
+  for (int x = 0; x < unitsX; x++) {
+    mazeUnitPositions[x] = new int[unitsY];
+  }
+
+  // initialise mazeWalls
+  for (int y = 0; y < unitsY; y++) {
+    for (int x = 0; x < unitsX; x++) {
+
+      // get pointers to each of the right walls
+      MazeWall * left = &mazeWalls[mazeWallPositions[x * 2][y]];
+      MazeWall * top = &mazeWalls[mazeWallPositions[x * 2 + 1][y]];
+      MazeWall * right = &mazeWalls[mazeWallPositions[x * 2 + 2][y]];
+      MazeWall * bottom = &mazeWalls[mazeWallPositions[x * 2 + 1][y+1]];
+
+      // make that unit!
+      MazeUnit newUnit(x, y, left, top, right, bottom);
+
+      // add to vector and save position
+      mazeUnits.push_back(newUnit);
+      mazeUnitPositions[x][y] = y * unitsX + x;
     }
   }
 }
