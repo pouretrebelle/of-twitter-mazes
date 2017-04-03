@@ -7,8 +7,10 @@ public:
 
   MazeWall(int _x, int _y, bool _vertical, bool _disabled);
 
+  void draw(float unitSize);
+
   int x, y;
-  bool vertical, active, disabled;
+  bool horizontal, active, disabled;
 
 private:
 

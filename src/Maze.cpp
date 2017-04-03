@@ -1,13 +1,16 @@
 #include "Maze.h"
 
-Maze::Maze(int _w, int _rows, int _columns) {
+Maze::Maze() {
+}
+
+void Maze::setup(int _w, int _rows, int _columns) {
 
   // assign variables
   w = _w * 1.0;
   unitsX = _rows;
   unitsY = _columns;
-  size = w / x;
-  h = y * size;
+  size = w / unitsX;
+  h = unitsY * size;
 
   // make a load of walls
   setupWalls();
@@ -35,10 +38,16 @@ void Maze::setupWalls() {
       bool disabled = false;
       if (x == 0) disabled = true; // left
       if (y == 0 && x % 2 == 1) disabled = true; // top
-      if (x > unitsX * 2) disabled = true; // right
-      if (y > unitsY) disabled = true; // bottom
+      if (x == unitsX * 2) disabled = true; // right
+      if (y == unitsY) disabled = true; // bottom
 
+      // make that wall!
       MazeWall newWall(floor(x*0.5), y, x % 2, disabled);
+
+      // don't draw the verticals of the bottom row
+      if (y == unitsY && x % 2 == 0) newWall.active = false;
+
+      // add to vector and save position
       mazeWalls.push_back(newWall);
       mazeWallPositions[x][y] = y * (unitsX * 2 + 1) + x;
     }
@@ -46,5 +55,8 @@ void Maze::setupWalls() {
 }
 
 void Maze::draw() {
-
+  ofSetLineWidth(wallWidth);
+  for (int i = 0; i < mazeWalls.size(); i++) {
+    mazeWalls[i].draw(size);
+  }
 }

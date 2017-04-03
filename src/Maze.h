@@ -7,15 +7,16 @@ class Maze {
 
 public:
 
-  Maze(int _w, int _rows, int _columns);
+  Maze();
 
+  void setup(int _w, int _rows, int _columns);
   void setupWalls();
   void draw();
 
   int unitsX, unitsY;
   float w, h, size;
 
-  int wallWidth = 3;
+  int wallWidth = 10;
 
   vector<MazeUnit> mazeUnits;
   int** mazeUnitPositions;
