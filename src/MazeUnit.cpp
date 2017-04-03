@@ -1,13 +1,9 @@
 #include "MazeUnit.h"
 
-MazeUnit::MazeUnit(int _x, int _y, MazeWall * left, MazeWall * top, MazeWall * right, MazeWall * bottom) {
+MazeUnit::MazeUnit(int _x, int _y, MazeWall * _walls[]) {
   x = _x;
   y = _y;
-
-  walls[0] = left;
-  walls[1] = top;
-  walls[2] = right;
-  walls[3] = bottom;
+  for (int i = 0; i < 4; i++) walls[i] = _walls[i];
 }
 
 int MazeUnit::countAbleNeighbours() {

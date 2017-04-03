@@ -72,9 +72,10 @@ void Maze::setupUnits() {
       MazeWall * top = &mazeWalls[mazeWallPositions[x * 2 + 1][y]];
       MazeWall * right = &mazeWalls[mazeWallPositions[x * 2 + 2][y]];
       MazeWall * bottom = &mazeWalls[mazeWallPositions[x * 2 + 1][y+1]];
+      MazeWall * newUnitWalls[4] = { left, top, right, bottom };
 
       // make that unit!
-      MazeUnit newUnit(x, y, left, top, right, bottom);
+      MazeUnit newUnit(x, y, newUnitWalls);
 
       // add to vector and save position
       mazeUnits.push_back(newUnit);
