@@ -9,3 +9,27 @@ MazeUnit::MazeUnit(int _x, int _y, MazeWall * left, MazeWall * top, MazeWall * r
   walls[2] = right;
   walls[3] = bottom;
 }
+
+int MazeUnit::countAbleNeighbours() {
+  int count = 0;
+  for (int i = 0; i < 4; i++) {
+    if (!walls[i]->disabled) count++;
+  }
+  return count;
+}
+
+int MazeUnit::countActiveNeighbours() {
+  int count = 0;
+  for (int i = 0; i < 4; i++) {
+    if (!walls[i]->disabled && walls[i]->active) count++;
+  }
+  return count;
+}
+
+int MazeUnit::countInactiveNeighbours() {
+  int count = 0;
+  for (int i = 0; i < 4; i++) {
+    if (!walls[i]->disabled && !walls[i]->active) count++;
+  }
+  return count;
+}
