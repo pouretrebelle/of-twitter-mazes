@@ -23,10 +23,10 @@ void MazeWall::draw(float unitSize) {
   ofPopMatrix();
 }
 
-void MazeWall::activate() {
+void MazeWall::build() {
   if (!disabled) active = true;
 }
 
-void MazeWall::deactivate() {
+void MazeWall::destroy() {
   if (!disabled) active = false;
 }
