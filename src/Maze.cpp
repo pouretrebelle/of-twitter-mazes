@@ -106,6 +106,7 @@ void Maze::setupUnits() {
 void Maze::huntAndKill() {
   MazeUnit * startUnit;
   startUnit = &mazeUnits[mazeUnitPositions[unitsX/2][unitsY/2]];
+
   while (startUnit != false) {
     kill(startUnit);
     startUnit = hunt();
@@ -147,7 +148,7 @@ MazeUnit * Maze::hunt() {
   for (int y = 0; y < unitsY; y++) {
     for (int x = 0; x < unitsX; x++) {
       MazeUnit * unit = &mazeUnits[mazeUnitPositions[x][y]];
-      if (!unit->active && unit->countDestroyedWalls() > 0) {
+      if (!unit->active && unit->countActiveNeighbours() > 0) {
         return unit;
       }
     }

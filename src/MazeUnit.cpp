@@ -32,19 +32,19 @@ int MazeUnit::countDestroyedWalls() {
 
 int MazeUnit::getActiveNeighbourIndex() {
   for (int i = 0; i < 4; i++) {
-    if (neighbours[i] && neighbours[i]->active) return i;
+    if (!walls[i]->disabled && neighbours[i]->active) return i;
   }
   return false;
 }
 
 int MazeUnit::getRandomInactiveNeighbourIndex() {
   int count = countInactiveNeighbours();
-  if (count == 0) return false;
+  if (count == 0) return -1;
   int choice = rand() % count;
   int through = 0;
   for (int i = 0; i < 4; i++) {
-    if (neighbours[i]) {
-      if (through == choice && !walls[i]->disabled) {
+    if (!walls[i]->disabled && !neighbours[i]->active) {
+      if (through == choice) {
         return i;
       }
       through++;
@@ -57,6 +57,14 @@ int MazeUnit::countInactiveNeighbours() {
   int count = 0;
   for (int i = 0; i < 4; i++) {
     if (!walls[i]->disabled && !neighbours[i]->active) count++;
+  }
+  return count;
+}
+
+int MazeUnit::countActiveNeighbours() {
+  int count = 0;
+  for (int i = 0; i < 4; i++) {
+    if (!walls[i]->disabled && neighbours[i]->active) count++;
   }
   return count;
 }

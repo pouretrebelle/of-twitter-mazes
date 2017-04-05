@@ -18,6 +18,7 @@ public:
   int getActiveNeighbourIndex();
   int getRandomInactiveNeighbourIndex();
   int countInactiveNeighbours();
+  int countActiveNeighbours();
 
   int x, y;
   MazeWall * walls[4];
