@@ -74,18 +74,29 @@ void Maze::setupUnits() {
       MazeWall * bottom = &mazeWalls[mazeWallPositions[x * 2 + 1][y+1]];
       MazeWall * newUnitWalls[4] = { left, top, right, bottom };
 
+      // make that unit!
+      MazeUnit newUnit(x, y, newUnitWalls);
+
+      // add to vector and save position
+      mazeUnitPositions[x][y] = y * unitsX + x;
+      mazeUnits.push_back(newUnit);
+    }
+  }
+
+  // add neighbours to mazeWalls
+  // must happen after they're all initialised
+  for (int y = 0; y < unitsY; y++) {
+    for (int x = 0; x < unitsX; x++) {
       MazeUnit * newUnitNeighbours[4];
       if (x > 0) newUnitNeighbours[0] = &mazeUnits[mazeUnitPositions[x - 1][y]]; // left
       if (y > 0) newUnitNeighbours[1] = &mazeUnits[mazeUnitPositions[x][y - 1]]; // top
       if (x < unitsX - 1) newUnitNeighbours[2] = &mazeUnits[mazeUnitPositions[x + 1][y]]; // right
       if (y < unitsY - 1) newUnitNeighbours[3] = &mazeUnits[mazeUnitPositions[x][y + 1]]; // bottom
 
-      // make that unit!
-      MazeUnit newUnit(x, y, newUnitWalls, newUnitNeighbours);
-
-      // add to vector and save position
-      mazeUnits.push_back(newUnit);
-      mazeUnitPositions[x][y] = y * unitsX + x;
+      // loop and assign them
+      for (int i = 0; i < 4; i++) {
+        mazeUnits[mazeUnitPositions[x][y]].neighbours[i] = newUnitNeighbours[i];
+      }
     }
   }
 }

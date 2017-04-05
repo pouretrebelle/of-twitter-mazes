@@ -6,7 +6,7 @@ class MazeUnit {
 
 public:
 
-  MazeUnit(int _x, int _y, MazeWall * _walls[], MazeUnit * _neighbours[]);
+  MazeUnit(int _x, int _y, MazeWall * _walls[]);
 
   int countAbleNeighbours();
   int countActiveNeighbours();
