@@ -12,9 +12,6 @@ public:
   void activate();
   void deactivate();
 
-  int countAbleWalls();
-  int countBuiltWalls();
-  int countDestroyedWalls();
   int getActiveNeighbourIndex();
   int getRandomInactiveNeighbourIndex();
   int countInactiveNeighbours();
