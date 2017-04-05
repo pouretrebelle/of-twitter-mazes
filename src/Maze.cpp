@@ -56,6 +56,11 @@ void Maze::setupWalls() {
       mazeWallPositions[x][y] = y * (unitsX * 2 + 1) + x;
     }
   }
+
+  // open up the start of the maze
+  mazeWalls[0].active = false;
+  // open up the end of the maze
+  mazeWalls[mazeWallPositions[unitsX*2][unitsY-1]].active = false;
 }
 
 void Maze::setupUnits() {
