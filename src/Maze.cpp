@@ -131,11 +131,6 @@ void Maze::kill(MazeUnit * unit) {
   int nextIndex = unit->getRandomInactiveNeighbourIndex();
   MazeUnit * nextUnit;
   while (nextIndex != -1) {
-    cout << unit->x;;
-    cout << " - ";
-    cout << unit->y;
-    cout << " - going for ";
-    cout << nextIndex << endl;
     nextUnit = unit->neighbours[nextIndex];
     nextUnit->activate();
     unit->walls[nextIndex]->destroy();
