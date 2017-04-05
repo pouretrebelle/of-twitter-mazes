@@ -112,11 +112,9 @@ void Maze::huntAndKill() {
     startUnit = hunt();
   }
   // reset activity of tiles
-  //for (let x = 0; x < columns; x++) {
-  //  for (let y = 0; y < rows; y++) {
-  //    tiles[x][y].active = false;
-  //  }
-  //}
+  for (int i = 0; i < mazeUnits.size(); i++) {
+    mazeUnits[i].active = false;
+  }
 }
 
 void Maze::kill(MazeUnit * unit) {
