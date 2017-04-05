@@ -8,6 +8,8 @@ public:
 
   MazeUnit(int _x, int _y, MazeWall * _walls[]);
 
+  void draw(float unitSize);
+
   int countAbleNeighbours();
   int countActiveNeighbours();
   int countInactiveNeighbours();
@@ -15,6 +17,8 @@ public:
   int x, y;
   MazeWall * walls[4];
   MazeUnit * neighbours[4];
+
+  bool active = false;
 
 private:
 

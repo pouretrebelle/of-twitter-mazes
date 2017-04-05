@@ -101,9 +101,15 @@ void Maze::setupUnits() {
   }
 }
 
-void Maze::draw() {
+void Maze::drawWalls() {
   ofSetLineWidth(wallWidth);
   for (int i = 0; i < mazeWalls.size(); i++) {
     mazeWalls[i].draw(size);
+  }
+}
+
+void Maze::drawUnits() {
+  for (int i = 0; i < mazeUnits.size(); i++) {
+    mazeUnits[i].draw(size);
   }
 }

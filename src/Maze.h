@@ -12,7 +12,8 @@ public:
   void setup(int _w, int _rows, int _columns);
   void setupWalls();
   void setupUnits();
-  void draw();
+  void drawWalls();
+  void drawUnits();
 
   int unitsX, unitsY;
   float w, h, size;

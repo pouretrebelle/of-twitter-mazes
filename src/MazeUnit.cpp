@@ -29,3 +29,8 @@ int MazeUnit::countInactiveNeighbours() {
   }
   return count;
 }
+
+void MazeUnit::draw(float unitSize) {
+  if (!active) return;
+  ofDrawRectangle(x*unitSize, y*unitSize, unitSize, unitSize);
+}

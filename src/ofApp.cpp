@@ -14,8 +14,10 @@ void ofApp::update(){
 void ofApp::draw(){
   ofBackground(255);
   ofTranslate(100, 100);
+  ofSetColor(ofColor::lightSteelBlue);
+  maze.drawUnits();
   ofSetColor(ofColor::cadetBlue);
-  maze.draw();
+  maze.drawWalls();
 }
 
 //--------------------------------------------------------------
