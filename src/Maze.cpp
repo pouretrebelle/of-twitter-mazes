@@ -3,7 +3,7 @@
 Maze::Maze() {
 }
 
-void Maze::setup(int _w, int _rows, int _columns) {
+void Maze::setup(int _w, int _rows, int _columns, int _wallWidth, ofColor _wallColor) {
 
   // assign variables
   w = _w * 1.0;
@@ -11,6 +11,8 @@ void Maze::setup(int _w, int _rows, int _columns) {
   unitsY = _columns;
   size = w / unitsX;
   h = unitsY * size;
+  wallWidth = _wallWidth;
+  wallColor = _wallColor;
 
   // make a load of walls
   setupWalls();
@@ -155,9 +157,10 @@ MazeUnit * Maze::hunt() {
 }
 
 void Maze::drawWalls() {
-  ofSetLineWidth(wallWidth);
+  ofSetLineWidth(0);
+  ofSetColor(wallColor);
   for (int i = 0; i < mazeWalls.size(); i++) {
-    mazeWalls[i].draw(size);
+    mazeWalls[i].draw(size, wallWidth);
   }
 }
 

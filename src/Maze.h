@@ -9,7 +9,7 @@ public:
 
   Maze();
 
-  void setup(int _w, int _rows, int _columns);
+  void setup(int _w, int _rows, int _columns, int _wallWidth, ofColor _wallColor);
   void setupWalls();
   void setupUnits();
 
@@ -23,7 +23,8 @@ public:
   int unitsX, unitsY;
   float w, h, size;
 
-  int wallWidth = 10;
+  int wallWidth;
+  ofColor wallColor;
 
   vector<MazeUnit> mazeUnits;
   int** mazeUnitPositions;

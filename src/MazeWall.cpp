@@ -8,17 +8,17 @@ MazeWall::MazeWall(int _x, int _y, bool _horizontal, bool _disabled) {
   active = true;
 }
 
-void MazeWall::draw(float unitSize) {
+void MazeWall::draw(float unitSize, int wallWidth) {
   // don't draw inactive walls
   if (!active) return;
 
   ofPushMatrix();
-  ofTranslate(x*unitSize, y*unitSize);
+  ofTranslate(x*unitSize - wallWidth/2, y*unitSize - wallWidth / 2);
   if (horizontal) {
-    ofDrawLine(0, 0, unitSize, 0);
+    ofDrawRectangle(0, 0, unitSize+wallWidth, wallWidth);
   }
   else {
-    ofDrawLine(0, 0, 0, unitSize);
+    ofDrawRectangle(0, 0, wallWidth, unitSize+ wallWidth);
   }
   ofPopMatrix();
 }

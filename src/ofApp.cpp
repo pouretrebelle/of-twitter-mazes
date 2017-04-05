@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-  maze.setup(824, 12, 8);
+  maze.setup(824, 20, 12, 5, ofColor::darkSlateBlue);
 }
 
 //--------------------------------------------------------------
@@ -14,9 +14,6 @@ void ofApp::update(){
 void ofApp::draw(){
   ofBackground(255);
   ofTranslate(100, 100);
-  ofSetColor(ofColor::lightSteelBlue);
-  maze.drawUnits();
-  ofSetColor(ofColor::cadetBlue);
   maze.drawWalls();
 }
 
