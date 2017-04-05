@@ -6,7 +6,7 @@ MazeUnit::MazeUnit(int _x, int _y, MazeWall * _walls[]) {
   for (int i = 0; i < 4; i++) walls[i] = _walls[i];
 }
 
-int MazeUnit::countAbleNeighbours() {
+int MazeUnit::countAbleWalls() {
   int count = 0;
   for (int i = 0; i < 4; i++) {
     if (!walls[i]->disabled) count++;
@@ -14,18 +14,49 @@ int MazeUnit::countAbleNeighbours() {
   return count;
 }
 
-int MazeUnit::countActiveNeighbours() {
+int MazeUnit::countBuiltWalls() {
   int count = 0;
   for (int i = 0; i < 4; i++) {
-    if (!walls[i]->disabled && walls[i]->active) count++;
+    if (walls[i]->active) count++;
   }
   return count;
+}
+
+int MazeUnit::countDestroyedWalls() {
+  int count = 0;
+  for (int i = 0; i < 4; i++) {
+    if (!walls[i]->disabled && !walls[i]->active) count++;
+  }
+  return count;
+}
+
+int MazeUnit::getActiveNeighbourIndex() {
+  for (int i = 0; i < 4; i++) {
+    if (neighbours[i] && neighbours[i]->active) return i;
+  }
+  return false;
+}
+
+int MazeUnit::getRandomInactiveNeighbourIndex() {
+  int count = countInactiveNeighbours();
+  if (count == 0) return false;
+  int choice = rand() % count;
+  int through = 0;
+  for (int i = 0; i < 4; i++) {
+    if (neighbours[i]) {
+      if (through == choice && !walls[i]->disabled) {
+        return i;
+      }
+      through++;
+    }
+  }
+  return -1;
 }
 
 int MazeUnit::countInactiveNeighbours() {
   int count = 0;
   for (int i = 0; i < 4; i++) {
-    if (!walls[i]->disabled && !walls[i]->active) count++;
+    if (!walls[i]->disabled && !neighbours[i]->active) count++;
   }
   return count;
 }

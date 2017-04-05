@@ -19,6 +19,7 @@ void Maze::setup(int _w, int _rows, int _columns) {
   setupUnits();
 
   // use algorithm to carve walls
+  huntAndKill();
 }
 
 void Maze::setupWalls() {
@@ -99,6 +100,59 @@ void Maze::setupUnits() {
       }
     }
   }
+}
+
+
+void Maze::huntAndKill() {
+  MazeUnit * startUnit;
+  startUnit = &mazeUnits[mazeUnitPositions[unitsX/2][unitsY/2]];
+  while (startUnit != false) {
+    kill(startUnit);
+    startUnit = hunt();
+  }
+  // reset activity of tiles
+  //for (let x = 0; x < columns; x++) {
+  //  for (let y = 0; y < rows; y++) {
+  //    tiles[x][y].active = false;
+  //  }
+  //}
+}
+
+void Maze::kill(MazeUnit * unit) {
+
+  unit->activate();
+
+  // remove an active edge
+  MazeWall * prevEdge = unit->walls[unit->getActiveNeighbourIndex()];
+  if (prevEdge) prevEdge->destroy();
+
+  // find a next tile
+  int nextIndex = unit->getRandomInactiveNeighbourIndex();
+  MazeUnit * nextUnit;
+  while (nextIndex != -1) {
+    cout << unit->x;;
+    cout << " - ";
+    cout << unit->y;
+    cout << " - going for ";
+    cout << nextIndex << endl;
+    nextUnit = unit->neighbours[nextIndex];
+    nextUnit->activate();
+    unit->walls[nextIndex]->destroy();
+    unit = nextUnit;
+    nextIndex = unit->getRandomInactiveNeighbourIndex();
+  }
+}
+
+MazeUnit * Maze::hunt() {
+  for (int y = 0; y < unitsY; y++) {
+    for (int x = 0; x < unitsX; x++) {
+      MazeUnit * unit = &mazeUnits[mazeUnitPositions[x][y]];
+      if (!unit->active && unit->countDestroyedWalls() > 0) {
+        return unit;
+      }
+    }
+  }
+  return false;
 }
 
 void Maze::drawWalls() {

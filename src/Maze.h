@@ -12,6 +12,11 @@ public:
   void setup(int _w, int _rows, int _columns);
   void setupWalls();
   void setupUnits();
+
+  void huntAndKill();
+  MazeUnit * hunt();
+  void kill(MazeUnit * unit);
+
   void drawWalls();
   void drawUnits();
 
