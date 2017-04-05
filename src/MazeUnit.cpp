@@ -30,6 +30,14 @@ int MazeUnit::countInactiveNeighbours() {
   return count;
 }
 
+void MazeUnit::activate() {
+  active = true;
+}
+
+void MazeUnit::deactivate() {
+  active = false;
+}
+
 void MazeUnit::draw(float unitSize) {
   if (!active) return;
   ofDrawRectangle(x*unitSize, y*unitSize, unitSize, unitSize);
