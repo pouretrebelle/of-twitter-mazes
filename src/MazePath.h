@@ -19,6 +19,10 @@ public:
   int unitsX;
   int unitsY;
 
+  ofColor pathColor;
+  int pathWidth;
+  int pathHeadSize;
+
   vector<MazeUnit> * mazeUnits;
   int** mazeUnitPositions;
   vector<MazePathSegment> mazePathSegments;

@@ -2,6 +2,9 @@
 
 MazePath::MazePath() {
   complete = false;
+  pathColor = ofColor::steelBlue;
+  pathWidth = 6;
+  pathHeadSize = 14;
 }
 
 void MazePath::setup(vector<MazeUnit> * _mazeUnits, int** _mazeUnitPositions, int _unitsX, int _unitsY) {
@@ -16,8 +19,8 @@ void MazePath::setup(vector<MazeUnit> * _mazeUnits, int** _mazeUnitPositions, in
 }
 
 void MazePath::draw(float unitSize) {
-  ofSetColor(ofColor::crimson);
-  ofSetLineWidth(6);
+  ofSetColor(pathColor);
+  ofSetLineWidth(pathWidth);
 
   // draw start of path
   ofDrawLine(0, 0.5*unitSize, 0.5*unitSize, 0.5*unitSize);
@@ -30,14 +33,14 @@ void MazePath::draw(float unitSize) {
   ofSetLineWidth(0);
   // draw each segment of path
   for (int i = 0; i < mazePathSegments.size(); i++) {
-    mazePathSegments[i].draw(unitSize, 6);
+    mazePathSegments[i].draw(unitSize, pathWidth);
   }
 
   // draw ball at the end of path
   if (!complete) {
     ofSetLineWidth(0);
     MazeUnit * end = last();
-    ofDrawCircle((end->x + 0.5)*unitSize, (end->y + 0.5)*unitSize, 10);
+    ofDrawCircle((end->x + 0.5)*unitSize, (end->y + 0.5)*unitSize, pathHeadSize*0.5);
   }
 }
 
