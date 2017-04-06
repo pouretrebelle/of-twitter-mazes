@@ -12,6 +12,7 @@ public:
   void activate();
   void deactivate();
 
+  int countWalls();
   int getActiveNeighbourIndex();
   int getRandomInactiveNeighbourIndex();
   int countInactiveNeighbours();

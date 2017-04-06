@@ -42,9 +42,16 @@ MazeUnit * MazePath::last() {
 void MazePath::travel(int direction) {
   // get the end of the line
   MazeUnit * current = last();
+  bool hitJunction = false;
+
   // move until you hit a wall
-  while (!current->walls[direction]->disabled && !current->walls[direction]->active) {
+  while (!current->walls[direction]->disabled && !current->walls[direction]->active && !hitJunction) {
     current = current->neighbours[direction];
+
+    // if the new unit has fewer than 2 walls then you've hit a junction and should stop moving
+    if (current->countWalls() != 2) {
+      hitJunction = true;
+    }
   }
   // if it has moved, add it to the path
   if (current != last()) {

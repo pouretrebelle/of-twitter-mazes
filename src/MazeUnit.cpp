@@ -6,6 +6,14 @@ MazeUnit::MazeUnit(int _x, int _y, MazeWall * _walls[]) {
   for (int i = 0; i < 4; i++) walls[i] = _walls[i];
 }
 
+int MazeUnit::countWalls() {
+  int count = 0;
+  for (int i = 0; i < 4; i++) {
+    if (walls[i]->active) count++;
+  }
+  return count;
+}
+
 int MazeUnit::getActiveNeighbourIndex() {
   for (int i = 0; i < 4; i++) {
     if (!walls[i]->disabled && neighbours[i]->active) return i;
