@@ -185,6 +185,10 @@ void Maze::drawWalls() {
       ofDrawRectangle(unit->x*size + wallWidth*0.5, (unit->y+0.5)*size, size - wallWidth, size);
     }
   }
+  // cover start of maze
+  ofDrawRectangle(-wallWidth*0.5, wallWidth*0.5, size*0.5 + wallWidth*0.5, size - wallWidth);
+  // cover end of maze
+  ofDrawRectangle((unitsX-0.5)*size, (unitsY-1)*size+wallWidth*0.5, size*0.5+wallWidth*0.5, size-wallWidth);
 
 }
 
