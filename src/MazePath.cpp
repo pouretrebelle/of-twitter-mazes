@@ -1,11 +1,15 @@
 #include "MazePath.h"
 
 MazePath::MazePath() {
+  complete = false;
 }
 
-void MazePath::setup(vector<MazeUnit> * _mazeUnits, int** _mazeUnitPositions) {
+void MazePath::setup(vector<MazeUnit> * _mazeUnits, int** _mazeUnitPositions, int _unitsX, int _unitsY) {
   mazeUnits = _mazeUnits;
   mazeUnitPositions = _mazeUnitPositions;
+
+  unitsX = _unitsX;
+  unitsY = _unitsY;
 
   // start at the start
   addToPath(0, 0);
@@ -25,10 +29,17 @@ void MazePath::draw(float unitSize) {
     ofDrawLine((start->x + 0.5)*unitSize, (start->y + 0.5)*unitSize, (end->x + 0.5)*unitSize, (end->y + 0.5)*unitSize);
   }
 
+  // draw end of path if it's finished
+  if (complete) {
+    ofDrawLine((unitsX-0.5)*unitSize, (unitsY-0.5)*unitSize, unitsX*unitSize, (unitsY-0.5)*unitSize);
+  }
+
   // draw ball at the end of path
-  ofSetLineWidth(0);
-  MazeUnit * end = last();
-  ofDrawCircle((end->x + 0.5)*unitSize, (end->y + 0.5)*unitSize, 10);
+  if (!complete) {
+    ofSetLineWidth(0);
+    MazeUnit * end = last();
+    ofDrawCircle((end->x + 0.5)*unitSize, (end->y + 0.5)*unitSize, 10);
+  }
 }
 
 void MazePath::addToPath(int x, int y) {
@@ -40,6 +51,9 @@ MazeUnit * MazePath::last() {
 }
 
 void MazePath::travel(int direction) {
+  // don't move if the path is complete
+  if (complete) return;
+
   // get the end of the line
   MazeUnit * current = last();
   bool hitJunction = false;
@@ -56,5 +70,10 @@ void MazePath::travel(int direction) {
   // if it has moved, add it to the path
   if (current != last()) {
     addToPath(current->x, current->y);
+  }
+
+  // if the current unit is the last one on the grid the maze is complete!
+  if (current->x == unitsX-1 && current->y == unitsY-1) {
+    complete = true;
   }
 }

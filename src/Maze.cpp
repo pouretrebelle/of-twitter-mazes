@@ -26,7 +26,7 @@ void Maze::setup(int _w, int _rows, int _columns, int _wallWidth, int _wallBorde
   huntAndKill();
 
   // setup maze path
-  mazePath.setup(&mazeUnits, mazeUnitPositions);
+  mazePath.setup(&mazeUnits, mazeUnitPositions, unitsX, unitsY);
 }
 
 void Maze::setupWalls() {
