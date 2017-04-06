@@ -41,6 +41,11 @@ void MazePath::draw(float unitSize) {
   }
 }
 
+void MazePath::reset() {
+  complete = false;
+  mazePathSegments.clear();
+}
+
 void MazePath::addToPath(int x, int y) {
   // get the next unit from the x and y
   MazeUnit * next = &(*mazeUnits)[mazeUnitPositions[x][y]];

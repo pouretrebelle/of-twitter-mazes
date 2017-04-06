@@ -11,6 +11,7 @@ public:
 
   void setup(vector<MazeUnit> * _mazeUnits, int** _mazeUnitPositions, int _unitsX, int _unitsY);
   void draw(float unitSize);
+  void reset();
 
   void addToPath(int x, int y);
   void travel(int direction);

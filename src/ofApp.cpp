@@ -7,7 +7,9 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+  if (maze.mazePath.complete) {
+    maze.regenerate();
+  }
 }
 
 //--------------------------------------------------------------
@@ -54,7 +56,7 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+  maze.regenerate();
 }
 
 //--------------------------------------------------------------

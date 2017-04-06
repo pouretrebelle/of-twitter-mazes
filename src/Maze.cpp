@@ -219,3 +219,16 @@ void Maze::go(string direction) {
     mazePath.travel(3);
   }
 }
+
+void Maze::regenerate() {
+  for (int i = 0; i < mazeWalls.size(); i++) {
+    // we don't want to reset the start and end
+    if (!mazeWalls[i].disabled) {
+      // activate all the walls again
+      mazeWalls[i].active = true;
+    }
+  }
+
+  huntAndKill();
+  mazePath.reset();
+}

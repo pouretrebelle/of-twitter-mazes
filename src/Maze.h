@@ -39,6 +39,8 @@ public:
   MazePath mazePath;
   void go(string direction);
 
+  void regenerate();
+
 private:
 
 };
