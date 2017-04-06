@@ -24,6 +24,9 @@ void Maze::setup(int _w, int _rows, int _columns, int _wallWidth, int _wallBorde
 
   // use algorithm to carve walls
   huntAndKill();
+
+  // setup maze path
+  mazePath.setup(&mazeUnits, mazeUnitPositions);
 }
 
 void Maze::setupWalls() {
@@ -196,4 +199,8 @@ void Maze::drawUnits() {
   for (int i = 0; i < mazeUnits.size(); i++) {
     mazeUnits[i].draw(size);
   }
+}
+
+void Maze::drawPath() {
+  mazePath.draw(size);
 }

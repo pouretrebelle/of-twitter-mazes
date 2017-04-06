@@ -173,12 +173,14 @@
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Maze.cpp" />
+    <ClCompile Include="src\MazePath.cpp" />
     <ClCompile Include="src\MazeUnit.cpp" />
     <ClCompile Include="src\MazeWall.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Maze.h" />
+    <ClInclude Include="src\MazePath.h" />
     <ClInclude Include="src\MazeUnit.h" />
     <ClInclude Include="src\MazeWall.h" />
     <ClInclude Include="src\ofApp.h" />

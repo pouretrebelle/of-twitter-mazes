@@ -16,6 +16,9 @@
     <ClCompile Include="src\MazeWall.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\MazePath.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -33,6 +36,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\MazeWall.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MazePath.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

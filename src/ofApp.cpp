@@ -15,6 +15,8 @@ void ofApp::draw(){
   ofBackground(255);
   ofTranslate(100, 100);
   maze.drawWalls();
+  maze.drawUnits();
+  maze.drawPath();
 }
 
 //--------------------------------------------------------------

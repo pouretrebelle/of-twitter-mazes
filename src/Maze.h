@@ -2,6 +2,7 @@
 #include "ofMain.h"
 #include "MazeUnit.h"
 #include "MazeWall.h"
+#include "MazePath.h"
 
 class Maze {
 
@@ -19,6 +20,7 @@ public:
 
   void drawWalls();
   void drawUnits();
+  void drawPath();
 
   int unitsX, unitsY;
   float w, h, size;
@@ -33,6 +35,8 @@ public:
 
   vector<MazeWall> mazeWalls;
   int** mazeWallPositions;
+
+  MazePath mazePath;
 
 private:
 
