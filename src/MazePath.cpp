@@ -23,10 +23,8 @@ void MazePath::draw(float unitSize) {
   ofDrawLine(0, 0.5*unitSize, 0.5*unitSize, 0.5*unitSize);
 
   // draw each segment of path
-  for (int i = 0; i < mazePathUnits.size() - 1; i++) {
-    MazeUnit * start = mazePathUnits[i];
-    MazeUnit * end = mazePathUnits[i+1];
-    ofDrawLine((start->x + 0.5)*unitSize, (start->y + 0.5)*unitSize, (end->x + 0.5)*unitSize, (end->y + 0.5)*unitSize);
+  for (int i = 0; i < mazePathSegments.size(); i++) {
+    mazePathSegments[i].draw(unitSize, 10);
   }
 
   // draw end of path if it's finished
@@ -43,11 +41,22 @@ void MazePath::draw(float unitSize) {
 }
 
 void MazePath::addToPath(int x, int y) {
-  mazePathUnits.push_back(&(*mazeUnits)[mazeUnitPositions[x][y]]);
+  // get the next unit from the x and y
+  MazeUnit * next = &(*mazeUnits)[mazeUnitPositions[x][y]];
+  // make segment out of previous end and next
+  MazePathSegment segment(last(), next);
+  // add to vector
+  mazePathSegments.push_back(segment);
 }
 
 MazeUnit * MazePath::last() {
-  return mazePathUnits[mazePathUnits.size() - 1];
+  // if there are segments
+  if (mazePathSegments.size() > 0) {
+    // return the 'end' of the last one
+    return mazePathSegments[mazePathSegments.size() - 1].end;
+  }
+  // otherwise return the origin
+  return &(*mazeUnits)[0];
 }
 
 void MazePath::travel(int direction) {

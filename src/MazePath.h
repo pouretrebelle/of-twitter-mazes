@@ -1,6 +1,7 @@
 #pragma once
 #include "ofMain.h"
 #include "MazeUnit.h"
+#include "MazePathSegment.h"
 
 class MazePath {
 
@@ -19,6 +20,7 @@ public:
 
   vector<MazeUnit> * mazeUnits;
   int** mazeUnitPositions;
+  vector<MazePathSegment> mazePathSegments;
   vector<MazeUnit *> mazePathUnits;
   MazeUnit * MazePath::last();
 

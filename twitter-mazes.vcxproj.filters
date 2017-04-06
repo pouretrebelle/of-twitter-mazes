@@ -19,6 +19,9 @@
     <ClCompile Include="src\MazePath.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\MazePathSegment.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -39,6 +42,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\MazePath.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MazePathSegment.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
