@@ -3,7 +3,7 @@
 Maze::Maze() {
 }
 
-void Maze::setup(int _w, int _rows, int _columns, int _wallWidth, ofColor _wallColor) {
+void Maze::setup(int _w, int _rows, int _columns, int _wallWidth, int _wallBorderRadius, ofColor _wallColor, ofColor _backgroundColor) {
 
   // assign variables
   w = _w * 1.0;
@@ -12,7 +12,9 @@ void Maze::setup(int _w, int _rows, int _columns, int _wallWidth, ofColor _wallC
   size = w / unitsX;
   h = unitsY * size;
   wallWidth = _wallWidth;
+  wallBorderRadius = _wallBorderRadius;
   wallColor = _wallColor;
+  backgroundColor = _backgroundColor;
 
   // make a load of walls
   setupWalls();
@@ -157,11 +159,33 @@ MazeUnit * Maze::hunt() {
 }
 
 void Maze::drawWalls() {
-  ofSetLineWidth(0);
+  //ofSetLineWidth(0);
+  //ofSetColor(wallColor);
+  //for (int i = 0; i < mazeWalls.size(); i++) {
+  //  mazeWalls[i].draw(size, wallWidth);
+  //}
+
+  // instead of drawing walls we draw each unit and connect them
+
+  // draw background rectangle
   ofSetColor(wallColor);
-  for (int i = 0; i < mazeWalls.size(); i++) {
-    mazeWalls[i].draw(size, wallWidth);
+  ofDrawRectangle(-wallWidth / 2, -wallWidth / 2, w + wallWidth, h + wallWidth);
+
+  ofSetColor(backgroundColor);
+  for (int i = 0; i < mazeUnits.size(); i++) {
+    MazeUnit * unit = &mazeUnits[i];
+    // draw the center of the unit
+    ofDrawRectRounded(unit->x*size+wallWidth*0.5, unit->y*size+wallWidth*0.5, size-wallWidth, size-wallWidth, wallBorderRadius);
+    // connect them horizontally
+    if (!unit->walls[2]->disabled && !unit->walls[2]->active) {
+      ofDrawRectangle((unit->x + 0.5)*size, unit->y*size + wallWidth*0.5, size, size - wallWidth);
+    }
+    // connect them vertically
+    if (!unit->walls[3]->disabled && !unit->walls[3]->active) {
+      ofDrawRectangle(unit->x*size + wallWidth*0.5, (unit->y+0.5)*size, size - wallWidth, size);
+    }
   }
+
 }
 
 void Maze::drawUnits() {
