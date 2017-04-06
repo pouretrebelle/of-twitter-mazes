@@ -204,3 +204,18 @@ void Maze::drawUnits() {
 void Maze::drawPath() {
   mazePath.draw(size);
 }
+
+void Maze::go(string direction) {
+  if (direction == "left") {
+    mazePath.travel(0);
+  }
+  else if (direction == "up") {
+    mazePath.travel(1);
+  }
+  else if (direction == "right") {
+    mazePath.travel(2);
+  }
+  else if (direction == "down") {
+    mazePath.travel(3);
+  }
+}

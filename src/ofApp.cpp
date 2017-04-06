@@ -21,7 +21,20 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+  switch (key) {
+    case 356:
+      maze.go("left");
+      break;
+    case 357:
+      maze.go("up");
+      break;
+    case 358:
+      maze.go("right");
+      break;
+    case 359:
+      maze.go("down");
+      break;
+  }
 }
 
 //--------------------------------------------------------------

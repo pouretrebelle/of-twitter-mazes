@@ -12,10 +12,12 @@ public:
   void draw(float unitSize);
 
   void addToPath(int x, int y);
+  void travel(int direction);
 
   vector<MazeUnit> * mazeUnits;
   int** mazeUnitPositions;
   vector<MazeUnit *> mazePathUnits;
+  MazeUnit * MazePath::last();
 
 private:
 

@@ -37,6 +37,7 @@ public:
   int** mazeWallPositions;
 
   MazePath mazePath;
+  void go(string direction);
 
 private:
 

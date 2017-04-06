@@ -27,10 +27,27 @@ void MazePath::draw(float unitSize) {
 
   // draw ball at the end of path
   ofSetLineWidth(0);
-  MazeUnit * end = mazePathUnits[mazePathUnits.size() - 1];
+  MazeUnit * end = last();
   ofDrawCircle((end->x + 0.5)*unitSize, (end->y + 0.5)*unitSize, 10);
 }
 
 void MazePath::addToPath(int x, int y) {
   mazePathUnits.push_back(&(*mazeUnits)[mazeUnitPositions[x][y]]);
+}
+
+MazeUnit * MazePath::last() {
+  return mazePathUnits[mazePathUnits.size() - 1];
+}
+
+void MazePath::travel(int direction) {
+  // get the end of the line
+  MazeUnit * current = last();
+  // move until you hit a wall
+  while (!current->walls[direction]->disabled && !current->walls[direction]->active) {
+    current = current->neighbours[direction];
+  }
+  // if it has moved, add it to the path
+  if (current != last()) {
+    addToPath(current->x, current->y);
+  }
 }
