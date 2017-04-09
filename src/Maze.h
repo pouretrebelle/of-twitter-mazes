@@ -37,7 +37,7 @@ public:
   int** mazeWallPositions;
 
   MazePath mazePath;
-  void go(string direction);
+  void go(string direction, ofColor color);
 
   void regenerate();
 

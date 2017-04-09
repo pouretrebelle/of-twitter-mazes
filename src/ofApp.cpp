@@ -25,16 +25,16 @@ void ofApp::draw(){
 void ofApp::keyPressed(int key){
   switch (key) {
     case 356:
-      maze.go("left");
+      maze.go("left", ofColor::orchid);
       break;
     case 357:
-      maze.go("up");
+      maze.go("up", ofColor::hotPink);
       break;
     case 358:
-      maze.go("right");
+      maze.go("right", ofColor::lightCoral);
       break;
     case 359:
-      maze.go("down");
+      maze.go("down", ofColor::lightSalmon);
       break;
   }
 }

@@ -2,7 +2,7 @@
 
 MazePath::MazePath() {
   complete = false;
-  pathColor = ofColor::steelBlue;
+  pathColor = ofColor::deepPink;
   pathWidth = 6;
   pathHeadSize = 14;
 }
@@ -15,7 +15,7 @@ void MazePath::setup(vector<MazeUnit> * _mazeUnits, int** _mazeUnitPositions, in
   unitsY = _unitsY;
 
   // start at the start
-  addToPath(0, 0);
+  addToPath(0, 0, pathColor);
 }
 
 void MazePath::draw(float unitSize) {
@@ -49,11 +49,11 @@ void MazePath::reset() {
   mazePathSegments.clear();
 }
 
-void MazePath::addToPath(int x, int y) {
+void MazePath::addToPath(int x, int y, ofColor color) {
   // get the next unit from the x and y
   MazeUnit * next = &(*mazeUnits)[mazeUnitPositions[x][y]];
   // make segment out of previous end and next
-  MazePathSegment segment(last(), next);
+  MazePathSegment segment(last(), next, color);
   // add to vector
   mazePathSegments.push_back(segment);
 }
@@ -68,7 +68,7 @@ MazeUnit * MazePath::last() {
   return &(*mazeUnits)[0];
 }
 
-void MazePath::travel(int direction) {
+void MazePath::travel(int direction, ofColor color) {
   // don't move if the path is complete
   if (complete) return;
 
@@ -87,7 +87,7 @@ void MazePath::travel(int direction) {
   }
   // if it has moved, add it to the path
   if (current != last()) {
-    addToPath(current->x, current->y);
+    addToPath(current->x, current->y, color);
   }
 
   // if the current unit is the last one on the grid the maze is complete!

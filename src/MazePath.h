@@ -13,8 +13,8 @@ public:
   void draw(float unitSize);
   void reset();
 
-  void addToPath(int x, int y);
-  void travel(int direction);
+  void addToPath(int x, int y, ofColor color);
+  void travel(int direction, ofColor color);
 
   int unitsX;
   int unitsY;

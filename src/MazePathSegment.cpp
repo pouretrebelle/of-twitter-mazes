@@ -1,13 +1,15 @@
 #include "MazePathSegment.h"
 
-MazePathSegment::MazePathSegment(MazeUnit * _start, MazeUnit * _end) {
+MazePathSegment::MazePathSegment(MazeUnit * _start, MazeUnit * _end, ofColor _color) {
   start = _start;
   end = _end;
+  color = _color;
 }
 
 void MazePathSegment::draw(float unitSize, float pathWidth) {
   // always start with the top/left side
   // to avoid complication of negative w/h
+  ofSetColor(color);
   if (start->x > end->x || start->y > end->y) {
     ofDrawRectangle((end->x + 0.5)*unitSize - pathWidth*0.5,
                     (end->y + 0.5)*unitSize - pathWidth*0.5,
