@@ -23,11 +23,11 @@ void MazePath::draw(float unitSize) {
   ofSetLineWidth(pathWidth);
 
   // draw start of path
-  ofDrawLine(0, 0.5*unitSize, 0.5*unitSize, 0.5*unitSize);
+  ofDrawLine(-unitSize, 0.5*unitSize, 0.5*unitSize, 0.5*unitSize);
 
   // draw end of path if it's finished
   if (complete) {
-    ofDrawLine((unitsX - 0.5)*unitSize, (unitsY - 0.5)*unitSize, unitsX*unitSize, (unitsY - 0.5)*unitSize);
+    ofDrawLine((unitsX - 0.5)*unitSize, (unitsY - 0.5)*unitSize, (unitsX+1)*unitSize, (unitsY - 0.5)*unitSize);
   }
 
   ofSetLineWidth(0);
