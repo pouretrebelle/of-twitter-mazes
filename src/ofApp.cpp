@@ -8,7 +8,7 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
   if (maze.mazePath.complete) {
-    maze.regenerate();
+    // maze.regenerate();
   }
 }
 

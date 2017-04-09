@@ -91,7 +91,7 @@ void MazePath::travel(int direction, ofColor color) {
   }
 
   // if the current unit is the last one on the grid the maze is complete!
-  if (current->x == unitsX-1 && current->y == unitsY-1) {
+  if (current->x == unitsX-1 && current->y == unitsY-1 && direction == 2) {
     complete = true;
   }
 }
