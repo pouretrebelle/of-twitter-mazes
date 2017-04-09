@@ -1,552 +1,556 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<ClCompile Include="src\ofApp.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\main.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\main.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\Maze.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\MazePath.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\MazePathSegment.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\MazeUnit.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\MazeWall.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\ofApp.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\AuthScope.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\BaseClient.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\BaseRoute.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\BaseServer.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Client.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientCache.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientEvents.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientProgressStream.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientSessionProvider.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientSessionSettings.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientState.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Context.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Cookie.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\CookieStore.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\CookieUtils.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Credentials.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\CredentialStore.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\DefaultClientHeaders.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\DefaultCookieProcessor.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\DefaultEncodingResponseStreamFilter.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\DefaultProxyProcessor.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\DefaultRedirectProcessor.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\FileSystemRoute.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\FormRequest.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\GetRequest.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\GetRequestTask.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\HeadRequest.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\HTTPClient.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\HTTPHost.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\HTTPUtils.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\IPVideoFrame.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\IPVideoRoute.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\JSONRequest.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\JSONWebToken.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth10Credentials.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth10HTTPClient.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth10RequestFilter.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth20Credentials.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth20HTTPClient.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth20RequestFilter.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\PostRequest.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\PostRoute.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Progress.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ProxySettings.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\PutRequest.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Request.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\RequestHandlerAdapter.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Response.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Session.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SessionStore.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimpleClient.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimpleFileServer.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimpleIPVideoServer.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimplePostServer.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimpleSSEServer.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimpleWebSocketServer.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SSEConnection.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SSEFrame.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SSERoute.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ThreadSettings.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\URIBuilder.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\WebSocketConnection.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\WebSocketExtensions.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\WebSocketFrame.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\WebSocketRoute.cpp">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxJSON\src\ofxJSONElement.cpp">
-			<Filter>addons\ofxJSON\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\..\addons\ofxJSON\libs\jsoncpp\src\jsoncpp.cpp">
-			<Filter>addons\ofxJSON\libs\jsoncpp\src</Filter>
-		</ClCompile>
-	</ItemGroup>
-	<ItemGroup>
-		<Filter Include="src">
-			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons">
-			<UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxHTTP">
-			<UniqueIdentifier>{C6854158-E9F7-B1F4-35F2-82BB}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxHTTP\src">
-			<UniqueIdentifier>{BD64EB20-70BF-2319-4F05-E888}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxHTTP\libs">
-			<UniqueIdentifier>{9EE903BE-6739-7640-0095-7D53}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxHTTP\libs\ofxHTTP">
-			<UniqueIdentifier>{7C9A0679-BF09-6EE1-BCD0-5301}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxHTTP\libs\ofxHTTP\include">
-			<UniqueIdentifier>{C816CF28-5B27-3D5F-FF30-E7AB}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxHTTP\libs\ofxHTTP\include\ofx">
-			<UniqueIdentifier>{C755059D-B172-2B35-2796-8B1C}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP">
-			<UniqueIdentifier>{BE22DE3A-FDEE-6969-DEE4-5A0B}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxHTTP\libs\ofxHTTP\src">
-			<UniqueIdentifier>{A871350A-2EE8-D0A8-A450-8C07}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxJSON">
-			<UniqueIdentifier>{CF86E01B-D8D7-A112-88F3-5883}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxJSON\src">
-			<UniqueIdentifier>{CE83AFE9-FE4A-682E-D5C9-50B4}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxJSON\libs">
-			<UniqueIdentifier>{5302B3F8-ECDD-0465-334A-F39E}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxJSON\libs\jsoncpp">
-			<UniqueIdentifier>{87D6C548-39D9-FD9F-093E-9F4E}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxJSON\libs\jsoncpp\include">
-			<UniqueIdentifier>{0B6CA981-484E-6E8C-776C-7298}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxJSON\libs\jsoncpp\include\json">
-			<UniqueIdentifier>{5FF260B2-1497-3EFE-19D5-40DB}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxJSON\libs\jsoncpp\src">
-			<UniqueIdentifier>{6D569A5B-6719-AEFD-C08E-5CE5}</UniqueIdentifier>
-		</Filter>
-	</ItemGroup>
-	<ItemGroup>
-		<ClInclude Include="src\ofApp.h">
-			<Filter>src</Filter>
-		</ClInclude>
-		<ClInclude Include="src\Maze.h">
-			<Filter>src</Filter>
-		</ClInclude>
-		<ClInclude Include="src\MazePath.h">
-			<Filter>src</Filter>
-		</ClInclude>
-		<ClInclude Include="src\MazePathSegment.h">
-			<Filter>src</Filter>
-		</ClInclude>
-		<ClInclude Include="src\MazeUnit.h">
-			<Filter>src</Filter>
-		</ClInclude>
-		<ClInclude Include="src\MazeWall.h">
-			<Filter>src</Filter>
-		</ClInclude>
-		<ClInclude Include="src\ofApp.h">
-			<Filter>src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\src\ofxHTTP.h">
-			<Filter>addons\ofxHTTP\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\AbstractClientTypes.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\AbstractServerTypes.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Authentication.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\AuthScope.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\BaseClient.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\BaseRoute.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\BaseServer.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Client.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientCache.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientEvents.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientProgressStream.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientSessionProvider.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientSessionSettings.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientState.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Context.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Cookie.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\CookieStore.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\CookieUtils.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Credentials.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\CredentialStore.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\DefaultClientHeaders.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\DefaultCookieProcessor.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\DefaultEncodingResponseStreamFilter.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\DefaultProxyProcessor.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\DefaultRedirectProcessor.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\FileSystemRoute.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\FormRequest.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\GetRequest.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\GetRequestTask.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\HeadRequest.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\HTTP.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\HTTPClient.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\HTTPHost.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\HTTPUtils.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\IPVideoFrame.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\IPVideoRoute.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\JSONRequest.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\JSONResponse.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\JSONWebToken.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth10Credentials.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth10HTTPClient.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth10RequestFilter.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth20Credentials.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth20HTTPClient.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth20RequestFilter.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\PostRequest.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\PostRoute.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\PostRouteEvents.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Progress.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ProxySettings.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\PutRequest.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Request.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\RequestHandlerAdapter.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Response.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ServerEvents.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Session.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SessionStore.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimpleClient.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimpleFileServer.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimpleIPVideoServer.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimplePostServer.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimpleSSEServer.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimpleWebSocketServer.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SSEConnection.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SSEEvents.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SSEFrame.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SSERoute.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ThreadErrorHandler.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ThreadSettings.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\URIBuilder.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\WebSocketConnection.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\WebSocketEvents.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\WebSocketExtensions.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\WebSocketFrame.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\WebSocketRoute.h">
-			<Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxJSON\src\ofxJSON.h">
-			<Filter>addons\ofxJSON\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxJSON\src\ofxJSONElement.h">
-			<Filter>addons\ofxJSON\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxJSON\libs\jsoncpp\include\json\json-forwards.h">
-			<Filter>addons\ofxJSON\libs\jsoncpp\include\json</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\..\addons\ofxJSON\libs\jsoncpp\include\json\json.h">
-			<Filter>addons\ofxJSON\libs\jsoncpp\include\json</Filter>
-		</ClInclude>
-	</ItemGroup>
-	<ItemGroup>
-		<ResourceCompile Include="icon.rc" />
-	</ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Maze.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MazePath.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MazePathSegment.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MazeUnit.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MazeWall.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\AuthScope.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\BaseClient.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\BaseRoute.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\BaseServer.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Client.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientCache.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientEvents.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientProgressStream.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientSessionProvider.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientSessionSettings.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientState.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Context.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Cookie.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\CookieStore.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\CookieUtils.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Credentials.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\CredentialStore.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\DefaultClientHeaders.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\DefaultCookieProcessor.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\DefaultEncodingResponseStreamFilter.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\DefaultProxyProcessor.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\DefaultRedirectProcessor.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\FileSystemRoute.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\FormRequest.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\GetRequest.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\GetRequestTask.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\HeadRequest.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\HTTPClient.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\HTTPHost.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\HTTPUtils.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\IPVideoFrame.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\IPVideoRoute.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\JSONRequest.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\JSONWebToken.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth10Credentials.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth10HTTPClient.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth10RequestFilter.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth20Credentials.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth20HTTPClient.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth20RequestFilter.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\PostRequest.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\PostRoute.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Progress.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ProxySettings.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\PutRequest.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Request.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\RequestHandlerAdapter.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Response.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Session.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SessionStore.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimpleClient.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimpleFileServer.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimpleIPVideoServer.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimplePostServer.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimpleSSEServer.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimpleWebSocketServer.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SSEConnection.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SSEFrame.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SSERoute.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ThreadSettings.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\URIBuilder.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\WebSocketConnection.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\WebSocketExtensions.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\WebSocketFrame.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\WebSocketRoute.cpp">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxJSON\src\ofxJSONElement.cpp">
+      <Filter>addons\ofxJSON\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\addons\ofxJSON\libs\jsoncpp\src\jsoncpp.cpp">
+      <Filter>addons\ofxJSON\libs\jsoncpp\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Twitter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxHTTP">
+      <UniqueIdentifier>{C6854158-E9F7-B1F4-35F2-82BB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxHTTP\src">
+      <UniqueIdentifier>{BD64EB20-70BF-2319-4F05-E888}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxHTTP\libs">
+      <UniqueIdentifier>{9EE903BE-6739-7640-0095-7D53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxHTTP\libs\ofxHTTP">
+      <UniqueIdentifier>{7C9A0679-BF09-6EE1-BCD0-5301}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxHTTP\libs\ofxHTTP\include">
+      <UniqueIdentifier>{C816CF28-5B27-3D5F-FF30-E7AB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxHTTP\libs\ofxHTTP\include\ofx">
+      <UniqueIdentifier>{C755059D-B172-2B35-2796-8B1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP">
+      <UniqueIdentifier>{BE22DE3A-FDEE-6969-DEE4-5A0B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxHTTP\libs\ofxHTTP\src">
+      <UniqueIdentifier>{A871350A-2EE8-D0A8-A450-8C07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxJSON">
+      <UniqueIdentifier>{CF86E01B-D8D7-A112-88F3-5883}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxJSON\src">
+      <UniqueIdentifier>{CE83AFE9-FE4A-682E-D5C9-50B4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxJSON\libs">
+      <UniqueIdentifier>{5302B3F8-ECDD-0465-334A-F39E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxJSON\libs\jsoncpp">
+      <UniqueIdentifier>{87D6C548-39D9-FD9F-093E-9F4E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxJSON\libs\jsoncpp\include">
+      <UniqueIdentifier>{0B6CA981-484E-6E8C-776C-7298}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxJSON\libs\jsoncpp\include\json">
+      <UniqueIdentifier>{5FF260B2-1497-3EFE-19D5-40DB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxJSON\libs\jsoncpp\src">
+      <UniqueIdentifier>{6D569A5B-6719-AEFD-C08E-5CE5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maze.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MazePath.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MazePathSegment.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MazeUnit.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MazeWall.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\src\ofxHTTP.h">
+      <Filter>addons\ofxHTTP\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\AbstractClientTypes.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\AbstractServerTypes.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Authentication.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\AuthScope.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\BaseClient.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\BaseRoute.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\BaseServer.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Client.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientCache.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientEvents.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientProgressStream.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientSessionProvider.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientSessionSettings.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientState.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Context.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Cookie.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\CookieStore.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\CookieUtils.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Credentials.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\CredentialStore.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\DefaultClientHeaders.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\DefaultCookieProcessor.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\DefaultEncodingResponseStreamFilter.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\DefaultProxyProcessor.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\DefaultRedirectProcessor.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\FileSystemRoute.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\FormRequest.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\GetRequest.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\GetRequestTask.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\HeadRequest.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\HTTP.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\HTTPClient.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\HTTPHost.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\HTTPUtils.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\IPVideoFrame.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\IPVideoRoute.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\JSONRequest.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\JSONResponse.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\JSONWebToken.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth10Credentials.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth10HTTPClient.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth10RequestFilter.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth20Credentials.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth20HTTPClient.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth20RequestFilter.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\PostRequest.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\PostRoute.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\PostRouteEvents.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Progress.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ProxySettings.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\PutRequest.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Request.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\RequestHandlerAdapter.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Response.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ServerEvents.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Session.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SessionStore.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimpleClient.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimpleFileServer.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimpleIPVideoServer.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimplePostServer.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimpleSSEServer.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimpleWebSocketServer.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SSEConnection.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SSEEvents.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SSEFrame.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SSERoute.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ThreadErrorHandler.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ThreadSettings.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\URIBuilder.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\WebSocketConnection.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\WebSocketEvents.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\WebSocketExtensions.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\WebSocketFrame.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\WebSocketRoute.h">
+      <Filter>addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxJSON\src\ofxJSON.h">
+      <Filter>addons\ofxJSON\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxJSON\src\ofxJSONElement.h">
+      <Filter>addons\ofxJSON\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxJSON\libs\jsoncpp\include\json\json-forwards.h">
+      <Filter>addons\ofxJSON\libs\jsoncpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\addons\ofxJSON\libs\jsoncpp\include\json\json.h">
+      <Filter>addons\ofxJSON\libs\jsoncpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Twitter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
 </Project>

@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "Maze.h"
+#include "Twitter.h"
 
 class ofApp : public ofBaseApp{
 
@@ -23,5 +24,6 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
     Maze maze;
+    Twitter twitter;
 		
 };
