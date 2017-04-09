@@ -162,12 +162,6 @@ MazeUnit * Maze::hunt() {
 }
 
 void Maze::drawWalls() {
-  //ofSetLineWidth(0);
-  //ofSetColor(wallColor);
-  //for (int i = 0; i < mazeWalls.size(); i++) {
-  //  mazeWalls[i].draw(size, wallWidth);
-  //}
-
   // instead of drawing walls we draw each unit and connect them
 
   // draw background rectangle
