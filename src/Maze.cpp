@@ -174,6 +174,12 @@ void Maze::drawWalls() {
   ofSetColor(wallColor);
   ofDrawRectangle(-wallWidth / 2, -wallWidth / 2, w + wallWidth, h + wallWidth);
 
+  // draw the entrance and exit walls
+  ofDrawRectangle(-wallWidth / 2 - size, -wallWidth / 2, size, wallWidth); // top of entrance
+  ofDrawRectangle(-wallWidth / 2 - size, -wallWidth / 2 + size, size, wallWidth); // bottom of entrance
+  ofDrawRectangle((unitsX)*size, (unitsY-1)*size - wallWidth/2, size, wallWidth); // top of exit
+  ofDrawRectangle((unitsX)*size, (unitsY)*size - wallWidth/2, size, wallWidth); // bottom of exit
+
   ofSetColor(backgroundColor);
   for (int i = 0; i < mazeUnits.size(); i++) {
     MazeUnit * unit = &mazeUnits[i];
