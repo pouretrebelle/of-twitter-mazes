@@ -1,357 +1,210 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-  </ItemGroup>
-  <PropertyGroup Label="Globals">
-    <ProjectGuid>{7FD42DF7-442E-479A-BA76-D0022F99702A}</ProjectGuid>
-    <Keyword>Win32Proj</Keyword>
-    <RootNamespace>twitter-mazes</RootNamespace>
-  </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>Unicode</CharacterSet>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v140</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>Unicode</CharacterSet>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v140</PlatformToolset>
-  </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="../../../../libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="../../../../libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="../../../../libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="../../../../libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
-  </ImportGroup>
-  <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>bin\</OutDir>
-    <IntDir>obj\$(Configuration)\</IntDir>
-    <TargetName>$(ProjectName)_debug</TargetName>
-    <LinkIncremental>true</LinkIncremental>
-    <GenerateManifest>true</GenerateManifest>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>bin\</OutDir>
-    <IntDir>obj\$(Configuration)\</IntDir>
-    <TargetName>$(ProjectName)_debug</TargetName>
-    <LinkIncremental>true</LinkIncremental>
-    <GenerateManifest>true</GenerateManifest>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>bin\</OutDir>
-    <IntDir>obj\$(Configuration)\</IntDir>
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>bin\</OutDir>
-    <IntDir>obj\$(Configuration)\</IntDir>
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\addons\ofxHTTP\libs;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src;..\..\..\..\addons\ofxHTTP\src;..\..\..\..\addons\ofxJSON\libs;..\..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\..\addons\ofxJSON\src</AdditionalIncludeDirectories>
-      <CompileAs>CompileAsCpp</CompileAs>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Console</SubSystem>
-      <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Link>
-    <PostBuildEvent />
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\addons\ofxHTTP\libs;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src;..\..\..\..\addons\ofxHTTP\src;..\..\..\..\addons\ofxJSON\libs;..\..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\..\addons\ofxJSON\src</AdditionalIncludeDirectories>
-      <CompileAs>CompileAsCpp</CompileAs>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Console</SubSystem>
-      <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Link>
-    <PostBuildEvent />
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <WholeProgramOptimization>false</WholeProgramOptimization>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\addons\ofxHTTP\libs;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src;..\..\..\..\addons\ofxHTTP\src;..\..\..\..\addons\ofxJSON\libs;..\..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\..\addons\ofxJSON\src</AdditionalIncludeDirectories>
-      <CompileAs>CompileAsCpp</CompileAs>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-    </ClCompile>
-    <Link>
-      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
-      <SubSystem>Console</SubSystem>
-      <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Link>
-    <PostBuildEvent />
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <WholeProgramOptimization>false</WholeProgramOptimization>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\addons\ofxHTTP\libs;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP;..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src;..\..\..\..\addons\ofxHTTP\src;..\..\..\..\addons\ofxJSON\libs;..\..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\..\addons\ofxJSON\src</AdditionalIncludeDirectories>
-      <CompileAs>CompileAsCpp</CompileAs>
-    </ClCompile>
-    <Link>
-      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
-      <SubSystem>Console</SubSystem>
-      <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Link>
-    <PostBuildEvent />
-  </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\ofApp.cpp" />
-    <ClCompile Include="src\Maze.cpp" />
-    <ClCompile Include="src\MazePath.cpp" />
-    <ClCompile Include="src\MazePathSegment.cpp" />
-    <ClCompile Include="src\MazeUnit.cpp" />
-    <ClCompile Include="src\MazeWall.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\AuthScope.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\BaseClient.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\BaseRoute.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\BaseServer.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Client.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientCache.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientEvents.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientProgressStream.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientSessionProvider.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientSessionSettings.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ClientState.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Context.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Cookie.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\CookieStore.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\CookieUtils.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Credentials.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\CredentialStore.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\DefaultClientHeaders.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\DefaultCookieProcessor.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\DefaultEncodingResponseStreamFilter.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\DefaultProxyProcessor.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\DefaultRedirectProcessor.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\FileSystemRoute.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\FormRequest.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\GetRequest.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\GetRequestTask.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\HeadRequest.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\HTTPClient.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\HTTPHost.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\HTTPUtils.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\IPVideoFrame.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\IPVideoRoute.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\JSONRequest.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\JSONWebToken.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth10Credentials.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth10HTTPClient.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth10RequestFilter.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth20Credentials.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth20HTTPClient.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\OAuth20RequestFilter.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\PostRequest.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\PostRoute.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Progress.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ProxySettings.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\PutRequest.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Request.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\RequestHandlerAdapter.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Response.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\Session.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SessionStore.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimpleClient.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimpleFileServer.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimpleIPVideoServer.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimplePostServer.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimpleSSEServer.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SimpleWebSocketServer.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SSEConnection.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SSEFrame.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\SSERoute.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\ThreadSettings.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\URIBuilder.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\WebSocketConnection.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\WebSocketExtensions.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\WebSocketFrame.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\src\WebSocketRoute.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxJSON\src\ofxJSONElement.cpp" />
-    <ClCompile Include="..\..\..\..\addons\ofxJSON\libs\jsoncpp\src\jsoncpp.cpp" />
-    <ClCompile Include="src\Twitter.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\ofApp.h" />
-    <ClInclude Include="src\Maze.h" />
-    <ClInclude Include="src\MazePath.h" />
-    <ClInclude Include="src\MazePathSegment.h" />
-    <ClInclude Include="src\MazeUnit.h" />
-    <ClInclude Include="src\MazeWall.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\src\ofxHTTP.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\AbstractClientTypes.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\AbstractServerTypes.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Authentication.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\AuthScope.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\BaseClient.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\BaseRoute.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\BaseServer.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Client.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientCache.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientEvents.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientProgressStream.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientSessionProvider.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientSessionSettings.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ClientState.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Context.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Cookie.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\CookieStore.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\CookieUtils.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Credentials.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\CredentialStore.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\DefaultClientHeaders.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\DefaultCookieProcessor.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\DefaultEncodingResponseStreamFilter.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\DefaultProxyProcessor.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\DefaultRedirectProcessor.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\FileSystemRoute.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\FormRequest.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\GetRequest.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\GetRequestTask.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\HeadRequest.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\HTTP.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\HTTPClient.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\HTTPHost.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\HTTPUtils.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\IPVideoFrame.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\IPVideoRoute.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\JSONRequest.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\JSONResponse.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\JSONWebToken.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth10Credentials.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth10HTTPClient.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth10RequestFilter.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth20Credentials.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth20HTTPClient.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\OAuth20RequestFilter.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\PostRequest.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\PostRoute.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\PostRouteEvents.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Progress.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ProxySettings.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\PutRequest.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Request.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\RequestHandlerAdapter.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Response.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ServerEvents.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\Session.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SessionStore.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimpleClient.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimpleFileServer.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimpleIPVideoServer.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimplePostServer.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimpleSSEServer.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SimpleWebSocketServer.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SSEConnection.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SSEEvents.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SSEFrame.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\SSERoute.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ThreadErrorHandler.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\ThreadSettings.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\URIBuilder.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\WebSocketConnection.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\WebSocketEvents.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\WebSocketExtensions.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\WebSocketFrame.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxHTTP\libs\ofxHTTP\include\ofx\HTTP\WebSocketRoute.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxJSON\src\ofxJSON.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxJSON\src\ofxJSONElement.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxJSON\libs\jsoncpp\include\json\json-forwards.h" />
-    <ClInclude Include="..\..\..\..\addons\ofxJSON\libs\jsoncpp\include\json\json.h" />
-    <ClInclude Include="src\Twitter.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
-      <Project>{5837595d-aca9-485c-8e76-729040ce4b0b}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="icon.rc">
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>$(OF_ROOT)\libs\openFrameworksCompiled\project\vs</AdditionalIncludeDirectories>
-    </ResourceCompile>
-  </ItemGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ProjectExtensions>
-    <VisualStudio>
-      <UserProperties RESOURCE_FILE="icon.rc" />
-    </VisualStudio>
-  </ProjectExtensions>
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|Win32">
+			<Configuration>Debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug|x64">
+			<Configuration>Debug</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|Win32">
+			<Configuration>Release</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|x64">
+			<Configuration>Release</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{7FD42DF7-442E-479A-BA76-D0022F99702A}</ProjectGuid>
+		<Keyword>Win32Proj</Keyword>
+		<RootNamespace>twitter-mazes</RootNamespace>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<WholeProgramOptimization>true</WholeProgramOptimization>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<WholeProgramOptimization>true</WholeProgramOptimization>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../../../libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<OutDir>bin\</OutDir>
+		<IntDir>obj\$(Configuration)\</IntDir>
+		<TargetName>$(ProjectName)_debug</TargetName>
+		<LinkIncremental>true</LinkIncremental>
+		<GenerateManifest>true</GenerateManifest>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<OutDir>bin\</OutDir>
+		<IntDir>obj\$(Configuration)\</IntDir>
+		<TargetName>$(ProjectName)_debug</TargetName>
+		<LinkIncremental>true</LinkIncremental>
+		<GenerateManifest>true</GenerateManifest>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<OutDir>bin\</OutDir>
+		<IntDir>obj\$(Configuration)\</IntDir>
+		<LinkIncremental>false</LinkIncremental>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<OutDir>bin\</OutDir>
+		<IntDir>obj\$(Configuration)\</IntDir>
+		<LinkIncremental>false</LinkIncremental>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<ClCompile>
+			<Optimization>Disabled</Optimization>
+			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<WarningLevel>Level3</WarningLevel>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src</AdditionalIncludeDirectories>
+			<CompileAs>CompileAsCpp</CompileAs>
+		</ClCompile>
+		<Link>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<SubSystem>Console</SubSystem>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+			<AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+		</Link>
+		<PostBuildEvent />
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<ClCompile>
+			<Optimization>Disabled</Optimization>
+			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<WarningLevel>Level3</WarningLevel>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src</AdditionalIncludeDirectories>
+			<CompileAs>CompileAsCpp</CompileAs>
+			<MultiProcessorCompilation>true</MultiProcessorCompilation>
+		</ClCompile>
+		<Link>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<SubSystem>Console</SubSystem>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+			<AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+		</Link>
+		<PostBuildEvent />
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<ClCompile>
+			<WholeProgramOptimization>false</WholeProgramOptimization>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+			<WarningLevel>Level3</WarningLevel>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src</AdditionalIncludeDirectories>
+			<CompileAs>CompileAsCpp</CompileAs>
+			<MultiProcessorCompilation>true</MultiProcessorCompilation>
+		</ClCompile>
+		<Link>
+			<IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+			<GenerateDebugInformation>false</GenerateDebugInformation>
+			<SubSystem>Console</SubSystem>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+			<AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+		</Link>
+		<PostBuildEvent />
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<ClCompile>
+			<WholeProgramOptimization>false</WholeProgramOptimization>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+			<WarningLevel>Level3</WarningLevel>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src</AdditionalIncludeDirectories>
+			<CompileAs>CompileAsCpp</CompileAs>
+		</ClCompile>
+		<Link>
+			<IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+			<GenerateDebugInformation>false</GenerateDebugInformation>
+			<SubSystem>Console</SubSystem>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+			<AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+		</Link>
+		<PostBuildEvent />
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClCompile Include="src\main.cpp" />
+		<ClCompile Include="src\ofApp.cpp" />
+		<ClCompile Include="src\Maze.cpp" />
+		<ClCompile Include="src\MazePath.cpp" />
+		<ClCompile Include="src\MazePathSegment.cpp" />
+		<ClCompile Include="src\MazeUnit.cpp" />
+		<ClCompile Include="src\MazeWall.cpp" />
+		<ClCompile Include="src\Twitter.cpp" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="src\ofApp.h" />
+		<ClInclude Include="src\Maze.h" />
+		<ClInclude Include="src\MazePath.h" />
+		<ClInclude Include="src\MazePathSegment.h" />
+		<ClInclude Include="src\MazeUnit.h" />
+		<ClInclude Include="src\MazeWall.h" />
+		<ClInclude Include="src\Twitter.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
+			<Project>{5837595d-aca9-485c-8e76-729040ce4b0b}</Project>
+		</ProjectReference>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="icon.rc">
+			<AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>$(OF_ROOT)\libs\openFrameworksCompiled\project\vs</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ProjectExtensions>
+		<VisualStudio>
+			<UserProperties RESOURCE_FILE="icon.rc" />
+		</VisualStudio>
+	</ProjectExtensions>
 </Project>

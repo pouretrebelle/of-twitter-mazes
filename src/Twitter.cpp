@@ -3,6 +3,6 @@
 Twitter::Twitter() {
 }
 
-Twitter::setup(Maze * _maze) {
+void Twitter::setup(Maze * _maze) {
   maze = _maze;
 }

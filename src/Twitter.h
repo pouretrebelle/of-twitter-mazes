@@ -2,9 +2,6 @@
 #include "ofMain.h"
 #include "Maze.h"
 
-#include "ofxHTTP.h"
-#include "ofxJSON.h"
-
 class Twitter {
 
 public:
