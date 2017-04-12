@@ -116,7 +116,11 @@ void Maze::setupUnits() {
 
 
 void Maze::huntAndKill() {
+  // this is the algorithm that carves the maze
+
   MazeUnit * startUnit;
+
+  // start in the middle
   startUnit = &mazeUnits[mazeUnitPositions[unitsX/2][unitsY/2]];
 
   while (startUnit != false) {
@@ -130,10 +134,13 @@ void Maze::huntAndKill() {
 }
 
 void Maze::kill(MazeUnit * unit) {
+  // kill heads in a random direction, destroying the wall and activating the unit
+  // when it reaches a unit which is surrounded by previously-visited units it stops
 
   unit->activate();
 
   // remove an active edge
+  // this is to connect the current kill loop to the previous one
   MazeWall * prevEdge = unit->walls[unit->getActiveNeighbourIndex()];
   if (prevEdge) prevEdge->destroy();
 
@@ -150,6 +157,8 @@ void Maze::kill(MazeUnit * unit) {
 }
 
 MazeUnit * Maze::hunt() {
+  // hunt searches for a unit starting in the top left
+  // it stops when it hits one that has at least one neighbour that's been visited before
   for (int y = 0; y < unitsY; y++) {
     for (int x = 0; x < unitsX; x++) {
       MazeUnit * unit = &mazeUnits[mazeUnitPositions[x][y]];
@@ -163,6 +172,7 @@ MazeUnit * Maze::hunt() {
 
 void Maze::drawWalls() {
   // instead of drawing walls we draw each unit and connect them
+  // this is just for the slightly rounded inner walls
 
   // draw background rectangle
   ofSetColor(wallColor);
