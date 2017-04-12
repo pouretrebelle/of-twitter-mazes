@@ -37,6 +37,10 @@ void ofApp::keyPressed(int key){
     case 359:
       maze.go("down", ofColor::lightSalmon);
       break;
+    case 32:
+      // spacebar
+      maze.regenerate();
+      break;
   }
 }
 
