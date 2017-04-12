@@ -8,6 +8,10 @@ To compile it needs to be inside the `myApps` folder of your openFrameworks inst
 
 I wanted to make a maze bot that can only be interacted with by tweeting it. Unfortunately I failed to achieve that goal due to difficulty with the oF addons that were necessary to that functionality. At present you can interact with the mazes using the arrow keys on the keyboard.
 
+## Screenshots
+
+![Demo 1](/screenshots/demo1.jpg?raw=true)
+![Demo 2](/screenshots/demo2.jpg?raw=true)
 
 ## References
 
