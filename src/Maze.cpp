@@ -230,16 +230,16 @@ void Maze::drawPath() {
 }
 
 void Maze::go(string direction, ofColor color) {
-  if (direction == "left") {
+  if (direction == "left" || direction == "l") {
     mazePath.travel(0, color);
   }
-  else if (direction == "up") {
+  else if (direction == "up" || direction == "u") {
     mazePath.travel(1, color);
   }
-  else if (direction == "right") {
+  else if (direction == "right" || direction == "r") {
     mazePath.travel(2, color);
   }
-  else if (direction == "down") {
+  else if (direction == "down" || direction == "d") {
     mazePath.travel(3, color);
   }
 }
