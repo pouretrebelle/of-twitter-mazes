@@ -1,6 +1,7 @@
 #pragma once
 #include "ofMain.h"
 #include "Maze.h"
+#include "ofxOsc.h"
 
 class Twitter {
 
