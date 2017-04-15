@@ -11,9 +11,7 @@
 # Generated artefacts
 bin/*_debug*
 bin/*.app
-!bin/data/
-bin/*.app
-!bin/data/
+bin/data/
 
 build/
 DerivedData
