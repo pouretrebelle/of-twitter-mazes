@@ -5,6 +5,7 @@ var express = require('express');
 var deasync = require('deasync');
 var env = require('dotenv').config();
 var fs = require('fs');
+var osc = require('node-osc');
 
 let trackingId = '';
 
@@ -30,6 +31,13 @@ var client = new Twitter({
 });
 
 
+// Setup OSC sender and receiver
+//=====================================
+
+var oscClient = new osc.Client('127.0.0.1', 6001);
+var oscServer = new osc.Server(6002, '127.0.0.1');
+
+
 // Stream tweets mentioning mazingbot
 //=====================================
 
@@ -50,7 +58,7 @@ client.stream('statuses/filter', {track: '@mazingbot'}, function(stream) {
 //=====================================
 
 function newMaze() {
-  var image = fs.readFileSync('../bin/data/current.jpg');
+  var image = fs.readFileSync('../bin/data/new.jpg');
   var imageId = uploadMedia(image);
   if (imageId) {
     var tweetId = postTweet({
@@ -62,19 +70,38 @@ function newMaze() {
 }
 
 
+// Respond to maze completion message
+//=====================================
+
+oscServer.on('message', function (msg, rinfo) {
+  if (msg[2][0] == '/complete') {
+    // var image = fs.readFileSync('../bin/data/complete.jpg');
+    // var imageId = uploadMedia(image);
+    // var tweetData = postTweet({
+    //   status: 'yay we completed the maze!',
+    //   mediaId: imageId,
+    // });
+    newMaze();
+  }
+});
+
+
 // Respond to a tweet
 //=====================================
 
 function respondToTweet(event) {
+  oscClient.send('/update', event.text, event.user.profile_link_color, function (err) {
+    if (err) {
+      console.error(new Error(err));
+    }
+    else {
+      // leave a second so oF has time to do its thang
+      setTimeout(function() {sendReply(event)}, 1000);
+    }
+  });
+}
 
-  console.log(event.text);
-
-  // todo:
-  // ping oF with event.text
-  // check wether it's completed
-  // if it is send a round robin tweet
-  // otherwise do this:
-
+function sendReply(event) {
   var image = fs.readFileSync('../bin/data/current.jpg');
   var imageId = uploadMedia(image);
   var tweetData = postTweet({
@@ -143,4 +170,8 @@ var server = app.listen(process.env.PORT || 2000, function () {
 server.timeout = 0;
 
 // Post new maze on server start
-newMaze();
+oscClient.send('/initialise', function (err) {
+  if (!err) {
+    setTimeout(newMaze, 1000);
+  }
+});

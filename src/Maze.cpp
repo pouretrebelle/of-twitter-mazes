@@ -3,7 +3,7 @@
 Maze::Maze() {
 }
 
-void Maze::setup(int _w, int _rows, int _columns, int _wallWidth, int _wallBorderRadius, ofColor _wallColor, ofColor _backgroundColor) {
+void Maze::setup(int _w, int _rows, int _columns, int _margin, int _wallWidth, int _wallBorderRadius, ofColor _wallColor, ofColor _backgroundColor) {
 
   // assign variables
   w = _w * 1.0;
@@ -11,6 +11,7 @@ void Maze::setup(int _w, int _rows, int _columns, int _wallWidth, int _wallBorde
   unitsY = _columns;
   size = w / unitsX;
   h = unitsY * size;
+  margin = _margin;
   wallWidth = _wallWidth;
   wallBorderRadius = _wallBorderRadius;
   wallColor = _wallColor;
@@ -168,6 +169,19 @@ MazeUnit * Maze::hunt() {
     }
   }
   return false;
+}
+
+void Maze::draw() {
+  ofSetColor(255);
+  ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
+
+  ofPushMatrix();
+    ofTranslate(margin, margin);
+
+    drawWalls();
+    drawUnits();
+    drawPath();
+  ofPopMatrix();
 }
 
 void Maze::drawWalls() {

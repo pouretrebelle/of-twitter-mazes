@@ -2,12 +2,13 @@
 
 //--------------------------------------------------------------
 void ofApp::setup() {
-  maze.setup(930, 20, 9, 6, 8, ofColor::black, ofColor::white);
+  maze.setup(930, 20, 9, 46, 6, 8, ofColor::black, ofColor::white);
   twitter.setup(&maze);
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
+  twitter.update();
   if (maze.mazePath.complete) {
     // maze.regenerate();
   }
@@ -16,15 +17,7 @@ void ofApp::update() {
 //--------------------------------------------------------------
 void ofApp::draw() {
   ofBackground(255);
-
-  // grabScreen doesn't work well with ofBackground
-  ofSetColor(255);
-  ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
-
-  ofTranslate(46, 46);
-  maze.drawWalls();
-  maze.drawUnits();
-  maze.drawPath();
+  maze.draw();
 }
 
 //--------------------------------------------------------------
@@ -51,5 +44,5 @@ void ofApp::keyPressed(int key) {
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button) {
-  twitter.saveImage();
+  twitter.saveImage("current");
 }
