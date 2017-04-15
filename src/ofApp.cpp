@@ -16,6 +16,11 @@ void ofApp::update() {
 //--------------------------------------------------------------
 void ofApp::draw() {
   ofBackground(255);
+
+  // grabScreen doesn't work well with ofBackground
+  ofSetColor(255);
+  ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
+
   ofTranslate(46, 46);
   maze.drawWalls();
   maze.drawUnits();
@@ -46,5 +51,5 @@ void ofApp::keyPressed(int key) {
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button) {
-  maze.regenerate();
+  twitter.saveImage();
 }

@@ -9,7 +9,9 @@ public:
   Twitter();
 
   void setup(Maze * _maze);
+  void saveImage();
 
+  ofImage image;
   Maze * maze;
 
 private:
