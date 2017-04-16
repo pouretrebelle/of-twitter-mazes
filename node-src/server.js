@@ -7,6 +7,7 @@ var env = require('dotenv').config();
 var fs = require('fs');
 var osc = require('node-osc');
 
+let contributors = [];
 let trackingId = '';
 
 // setup server
@@ -58,6 +59,9 @@ client.stream('statuses/filter', {track: '@mazingbot'}, function(stream) {
 //=====================================
 
 function newMaze() {
+  // reset contributors
+  contributors = [];
+
   var image = fs.readFileSync('../bin/data/new.jpg');
   var imageId = uploadMedia(image);
   if (imageId) {
@@ -75,12 +79,31 @@ function newMaze() {
 
 oscServer.on('message', function (msg, rinfo) {
   if (msg[2][0] == '/complete') {
-    // var image = fs.readFileSync('../bin/data/complete.jpg');
-    // var imageId = uploadMedia(image);
-    // var tweetData = postTweet({
-    //   status: 'yay we completed the maze!',
-    //   mediaId: imageId,
-    // });
+
+    // compose tweet string
+    var status = 'Maze completed. Thanks to ';
+    // add contributors
+    var i = 0;
+    while (status.length <= 141 && i < contributors.length) {
+      status += contributors[i]+', ';
+      i++;
+    }
+    // trim last 2 characters
+    status = status.substring(0, status.length - 2) + '.';
+    // if it's still longer than 140
+    if (status.length > 140) {
+      // remove the last username and its comma and space and fullstop
+      var trim = 3 + contributors[i-1].length;
+      // add an ellipses
+      status = status.substring(0, status.length - trim) + '…';
+    }
+
+    var image = fs.readFileSync('../bin/data/complete.jpg');
+    var imageId = uploadMedia(image);
+    var tweetData = postTweet({
+      status: status,
+      mediaId: imageId,
+    });
     newMaze();
   }
 });
@@ -102,6 +125,11 @@ function respondToTweet(event) {
 }
 
 function sendReply(event) {
+  // add username to list of contributors
+  if (contributors.indexOf('@'+event.user.screen_name) == -1) {
+    contributors.push('@'+event.user.screen_name);
+  }
+
   var image = fs.readFileSync('../bin/data/current.jpg');
   var imageId = uploadMedia(image);
   var tweetData = postTweet({
