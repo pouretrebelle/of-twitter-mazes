@@ -66,7 +66,7 @@ function newMaze() {
   var imageId = uploadMedia(image);
   if (imageId) {
     var tweetId = postTweet({
-      status: '@'+process.env.TWITTER_USERNAME+' Tweet me directions',
+      status: 'Tweet me directions',
       mediaId: imageId
     }).id_str;
     trackingId = tweetId;
