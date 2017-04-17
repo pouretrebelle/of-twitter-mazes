@@ -68,6 +68,16 @@ void Twitter::mazeCompleted() {
   // save the complete maze
   saveImage("complete");
 
+  // make a filename using the current date and time
+  auto t = time(nullptr);
+  auto tm = *localtime(&t);
+  ostringstream oss;
+  oss << put_time(&tm, "%y-%m-%d-%H%M%S");
+  string filename = "complete/" + oss.str();
+
+  // permanently save complete maze
+  saveImage(filename);
+
   // regenerate and save
   maze->regenerate();
   saveImage("new");
