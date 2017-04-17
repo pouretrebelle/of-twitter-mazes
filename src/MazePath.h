@@ -20,6 +20,7 @@ public:
   int unitsY;
 
   ofColor pathColor;
+  ofColor originalPathColor;
   int pathWidth;
   int pathHeadSize;
 

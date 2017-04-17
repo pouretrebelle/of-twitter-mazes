@@ -2,7 +2,8 @@
 
 MazePath::MazePath() {
   complete = false;
-  pathColor = ofColor::deepPink;
+  pathColor = 0x6f767b;
+  originalPathColor = pathColor;
   pathWidth = 6;
   pathHeadSize = 14;
 }
@@ -27,6 +28,8 @@ void MazePath::draw(float unitSize) {
 
   // draw end of path if it's finished
   if (complete) {
+    // set the colour to the last segment
+    ofSetColor(mazePathSegments[mazePathSegments.size() - 1].color);
     ofDrawLine((unitsX - 0.5)*unitSize, (unitsY - 0.5)*unitSize, (unitsX+1)*unitSize, (unitsY - 0.5)*unitSize);
   }
 
@@ -46,6 +49,7 @@ void MazePath::draw(float unitSize) {
 
 void MazePath::reset() {
   complete = false;
+  pathColor = originalPathColor;
   mazePathSegments.clear();
 }
 
@@ -56,6 +60,11 @@ void MazePath::addToPath(int x, int y, ofColor color) {
   MazePathSegment segment(last(), next, color);
   // add to vector
   mazePathSegments.push_back(segment);
+
+  // if it's the first addition, change the path color
+  if (mazePathSegments.size() == 2) {
+    pathColor.set(mazePathSegments[1].color);
+  }
 }
 
 MazeUnit * MazePath::last() {
