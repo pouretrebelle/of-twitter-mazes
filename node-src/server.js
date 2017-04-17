@@ -81,7 +81,7 @@ oscServer.on('message', function (msg, rinfo) {
   if (msg[2][0] == '/complete') {
 
     // compose tweet string
-    var status = 'Maze completed. Thanks to ';
+    var status = 'Maze completed!\nThanks to ';
     // add contributors
     var i = 0;
     while (status.length <= 141 && i < contributors.length) {
@@ -89,11 +89,11 @@ oscServer.on('message', function (msg, rinfo) {
       i++;
     }
     // trim last 2 characters
-    status = status.substring(0, status.length - 2) + '.';
+    status = status.substring(0, status.length - 2);
     // if it's still longer than 140
     if (status.length > 140) {
-      // remove the last username and its comma and space and fullstop
-      var trim = 3 + contributors[i-1].length;
+      // remove the last username and its comma and space
+      var trim = 2 + contributors[i-1].length;
       // add an ellipses
       status = status.substring(0, status.length - trim) + '…';
     }
