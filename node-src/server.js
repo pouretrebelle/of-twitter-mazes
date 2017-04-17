@@ -39,10 +39,10 @@ var oscClient = new osc.Client('127.0.0.1', 6001);
 var oscServer = new osc.Server(6002, '127.0.0.1');
 
 
-// Stream tweets mentioning mazingbot
+// Stream tweets mentioning username
 //=====================================
 
-client.stream('statuses/filter', {track: '@mazingbot'}, function(stream) {
+client.stream('statuses/filter', {track: '@'+process.env.TWITTER_USERNAME}, function(stream) {
   stream.on('data', function(event) {
     // if the streamed tweet is a reply to the tracked one then respond to it
     if (event.in_reply_to_status_id_str == trackingId) {
@@ -66,7 +66,7 @@ function newMaze() {
   var imageId = uploadMedia(image);
   if (imageId) {
     var tweetId = postTweet({
-      status: 'Tweet me directions',
+      status: '@'+process.env.TWITTER_USERNAME+' Tweet me directions',
       mediaId: imageId
     }).id_str;
     trackingId = tweetId;
