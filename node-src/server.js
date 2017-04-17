@@ -113,7 +113,11 @@ oscServer.on('message', function (msg, rinfo) {
 //=====================================
 
 function respondToTweet(event) {
-  oscClient.send('/update', event.text, event.user.profile_link_color, function (err) {
+  // sanitise tweet text by removing punctuation and converting to lowercase
+  var text = event.text;
+  text = text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, '');
+
+  oscClient.send('/update', text, event.user.profile_link_color, function (err) {
     if (err) {
       console.error(new Error(err));
     }

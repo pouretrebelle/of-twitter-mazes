@@ -41,9 +41,6 @@ void Twitter::processTweet(string text, string color) {
   // covert string to hexadecimal and make an ofColor with it
   ofColor c = ofColor::fromHex(std::stoi(color, 0, 16));
 
-  // convert the tweet to lowercase
-  transform(text.begin(), text.end(), text.begin(), ::tolower);
-
   // loop through text to create vector of words
   vector<string> words;
   istringstream iss(text);
