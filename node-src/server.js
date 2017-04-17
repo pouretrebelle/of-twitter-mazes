@@ -1,7 +1,6 @@
 'use strict';
 
 var Twitter = require('twitter');
-var express = require('express');
 var deasync = require('deasync');
 var env = require('dotenv').config();
 var fs = require('fs');
@@ -9,19 +8,6 @@ var osc = require('node-osc');
 
 let contributors = [];
 let trackingId = '';
-
-// setup server
-var app = express();
-
-// health check
-var healthcheck = {
-  version: require('./package').version,
-  http: 'okay'
-};
-// healthcheck info public
-app.get(['/healthcheck'], function(req, res) {
-  res.jsonp(healthcheck);
-});
 
 // setup twitter client
 var client = new Twitter({
@@ -191,15 +177,6 @@ function uploadMedia(image) {
   deasync.loopWhile(function(){ return ret === undefined });
   return ret;
 }
-
-
-// start the server
-var server = app.listen(process.env.PORT || 2000, function () {
-  var host = server.address().address;
-  var port = server.address().port;
-  console.log('Example app listening at http://%s:%s', host, port);
-});
-server.timeout = 0;
 
 // Post new maze on server start
 oscClient.send('/initialise', function (err) {
