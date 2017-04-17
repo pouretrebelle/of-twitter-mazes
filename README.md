@@ -18,8 +18,7 @@ npm start
 
 ## Screenshots
 
-![Demo 1](/screenshots/demo1.jpg?raw=true)
-![Demo 2](/screenshots/demo2.jpg?raw=true)
+![Completed Mazes](/screenshots/twitter.jpg?raw=true)
 
 ## References
 
