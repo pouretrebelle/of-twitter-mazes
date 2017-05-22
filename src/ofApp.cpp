@@ -4,6 +4,7 @@
 void ofApp::setup() {
   maze.setup(930, 20, 9, 46, 6, 8, ofColor::black, ofColor::white);
   twitter.setup(&maze);
+  color = ofColor::crimson;
 }
 
 //--------------------------------------------------------------
@@ -24,21 +25,31 @@ void ofApp::draw() {
 void ofApp::keyPressed(int key) {
   switch (key) {
     case 356:
-      maze.go("left", 0x6f767b);
+      maze.go("left", color);
       break;
     case 357:
-      maze.go("up", 0x6f767b);
+      maze.go("up", color);
       break;
     case 358:
-      maze.go("right", 0x6f767b);
+      maze.go("right", color);
       break;
     case 359:
-      maze.go("down", 0x6f767b);
+      maze.go("down", color);
       break;
     case 32:
       // spacebar
       maze.regenerate();
       break;
+  }
+
+
+  if (key > 96 && key < 122) {
+    if (key - 97 < colors.size()) {
+      color = colors[key - 97];
+    }
+    else {
+      color = colors[ofRandom(colors.size())];
+    }
   }
 }
 
