@@ -51,6 +51,9 @@ void ofApp::keyPressed(int key) {
       color = colors[ofRandom(colors.size())];
     }
   }
+  else {
+    twitter.saveImage("maze-" + ofGetTimestampString());
+  }
 }
 
 //--------------------------------------------------------------
