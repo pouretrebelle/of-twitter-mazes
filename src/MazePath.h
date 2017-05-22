@@ -28,7 +28,7 @@ public:
   int** mazeUnitPositions;
   vector<MazePathSegment> mazePathSegments;
   vector<MazeUnit *> mazePathUnits;
-  MazeUnit * MazePath::last();
+  MazeUnit * last();
 
   bool complete;
 
